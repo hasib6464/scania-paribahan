@@ -1,11 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scania Paribahan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scania Paribahan</title>
+  <link rel="styleSheet" href="style.css">
+  <!-- ..........daisy ui......... -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body>
-    <h2>this is scania paribahan</h2>
+  <header class="ml-40 mr-40">
+    <nav>
+      <div class="">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Item 1</a></li>
+                <li>
+                  <a>Parent</a>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-3xl font-bold">S-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a> Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="btn px-10">
+              <a>Bus</a>
+              <img src="images/bus-icon.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="bg-[url(images/banner.png)] bg-no-repeat h-screen ">
+      <div class=" text-center">
+        <h1 class=" text-6xl text-white font-bold pt-20 ">End TO End Travel With <br><span class="text-orange-500"> S
+            Paribahan</span></h1>
+        <p class="pt-10 text-white">Scania's bus and coach range has always been concentrated<br> on chassis, intended
+          for use with anything between tourist coaches to city traffic</p>
+        <button onclick="handleBuyTicket()" class="btn btn-secondary mt-11 px-9 text-xl">Buy Ticket</button>
+      </div>
+    </main>
+    <section class="flex ml-16">
+      <div class="flex border bg-gray-50 h-32 w-1/4 p-10 mr-11 rounded-2xl translate-x-10 -translate-y-60">
+        <img src="./images/people.png">
+        <div class="pl-4">
+          <h1 class="font-bold text-4xl ">500k+</h1>
+          <h2 class="font-bold">Registered Users</h2>
+        </div>
+      </div>
+      <div class="flex border bg-gray-50 h-32 w-1/4 p-10 mr-11 rounded-2xl translate-x-10 -translate-y-60">
+        <img src="./images/ticket-cupon.png">
+        <div class="pl-4">
+          <h1 class="font-bold text-3xl ">1.7 Lacks</h1>
+          <h2  class="font-bold">Ticket Sold</h2>
+        </div>
+      </div>
+      <div class="flex border bg-gray-50 h-32 w-1/4 p-10 rounded-2xl translate-x-10 -translate-y-60">
+        <img src="./images/stoppage.png">
+        <div class="pl-4">
+          <h1 class="font-bold text-4xl ">80k+</h1>
+          <h2 class="font-bold">Rentals Partners</h2>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="text-5xl font-extrabold text-center">Best offers for you</h1>
+      <div class="flex pt-24 pb-10">
+        <div class="flex bg-yellow-400 w-6/12 rounded-2xl mr-5">
+          <div class="w-96 h-52 p-10  ">
+            <h1 class="font-extrabold text-3xl">15 % OFF</h1>
+            <h2 class="text-2xl">Your next purchase</h2>
+            <h3 class="text-red-800 text-xl">use by January 2024</h3>
+          </div>
+          <img class="h-52" src="images/info-devider.png">
+          <div class="w-60 h-52 p-10 ">
+            <h1 class="font-extrabold text-3xl">NEW<sub>15</sub></h1>
+            <h2 class="text-red-800 text-xl">Coupon Code</h2>
+          </div>
+        </div>
+        <div class="flex bg-pink-300 w-6/12 rounded-2xl">
+          <div class="w-80 h-52 p-10  ">
+            <h1 class="font-extrabold text-3xl">20 % OFF</h1>
+            <h2 class="text-2xl">Couple 20</h2>
+            <h3 class="text-red-800 text-xl">use by January 2024</h3>
+          </div>
+          <img class="h-52" src="images/info-devider.png">
+          <div class="w-60 h-52 p-10 ">
+            <h1 class="font-extrabold text-3xl">Couple 20</h1>
+            <h2 class="text-red-800 text-xl">Coupon Code</h2>
+          </div>
+        </div>
+      </div>
+      <div class="text-center ">
+        <button class="btn btn-outline btn-secondary text-2xl">See All Offers</button>
+      </div>
+    </section>
+
+  </header>
+
+  <main>
+    <section class="bg-slate-50" >
+      <div class="text-center pt-20">
+        <h1 class="text-4xl font-bold">M.H Paribahan</h1>
+        <p class="text-xl p-16">Since its start in Sweden in 1891, Scania has rolled forward on a solid<br> culture of
+          innovation and continuous improvements</p>
+      </div>
+      <section class="bg-white h-80 flex" >
+        <div class="w-8/12">
+          <div>
+            <div class="flex">
+              <img src="images/bus-logo.png" alt="">
+              <div class="pl-5">
+                <h1 class="text-3xl font-bold">Scania Paribahan</h1>
+                <h3 class="text-xl">Coach-009-WEB ! AC_Business</h3>
+              </div>
+              <div class="btn btn-wide ml-64">
+                <img src="images/seat-gray.png">
+                <button class="text-xl">40 Seats Left</button>
+              </div>
+            </div>
+          </div>
+          <section class="bg-slate-300 h-56 w-10/12 rounded-2xl">
+            <div class="flex justify-between p-10">
+              <div class="text-2xl ">
+                <h1 class="pb-6">Route</h1>
+    
+                <h2>Departure Time</h2>
+              </div>
+              <div class="text-2xl">
+                <h1 class="pb-6">Dhaka - Sylhet</h1>
+                <h2>9:00 PM</h2>
+              </div>
+            </div>
+            <div class="">
+              <button class="btn btn-wide mr-3 ml-5">Boarding Point - Laxmipur </button>
+            <button class="btn btn-wide mr-3 ">Dropping Point - Bogura</button>
+            <button class="btn btn-wide ">Est. Time - 11 Hour</button>
+            </div>
+          </section>
+        </div>
+        <div class=" flex">
+          <img src="images/info-devider.png">
+          <div class="text-center mt-24 ml-20">
+            <img class="ml-10" src="images/fare.png">
+            <h1 class="text-4xl font-bold">550 Taka </h1>
+            <h2 class="text-2xl">Per Seat</h2>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ...........seat section........... -->
+    <section id="pari" class="hidden">
+      <div class="flex w-7/12">
+        <div class="grid grid-cols-5 justify-center gap-8 w-7/12 ml-32 text-xl ">
+          <h1 class="text-xl">A</h1>
+          <kbd id="A1" class="kbd">A1</kbd>
+          <kbd id="A2" class="kbd">A2</kbd>
+          <kbd id="A3" class="kbd">A3</kbd>
+          <kbd id="A4" class="kbd">A4</kbd>
+          <h1 class="text-xl">B</h1>
+          <kbd id="B1" class="kbd">B1</kbd>
+          <kbd id="B2" class="kbd">B2</kbd>
+          <kbd id="B3" class="kbd">B3</kbd>
+          <kbd id="B4" class="kbd">B4</kbd>
+          <h1 class="text-xl">C</h1>
+          <kbd id="C1" class="kbd">C1</kbd>
+          <kbd id="C2" class="kbd">C2</kbd>
+          <kbd id="C3" class="kbd">C3</kbd>
+          <kbd id="C4" class="kbd">C4</kbd>
+          <h1 class="text-xl">D</h1>
+          <kbd id="D1" class="kbd">D1</kbd>
+          <kbd id="D2" class="kbd">D2</kbd>
+          <kbd id="D3" class="kbd">D3</kbd>
+          <kbd id="D4" class="kbd">D4</kbd>
+          <h1 class="text-xl">E</h1>
+          <kbd id="E1" class="kbd">E1</kbd>
+          <kbd id="E2" class="kbd">E2</kbd>
+          <kbd id="E3" class="kbd">E3</kbd>
+          <kbd id="E4" class="kbd">E4</kbd>
+          <h1 class="text-xl">F</h1>
+          <kbd id="F1" class="kbd">F1</kbd>
+          <kbd id="F2" class="kbd">F2</kbd>
+          <kbd id="F3" class="kbd">F3</kbd>
+          <kbd id="F4" class="kbd">F4</kbd>
+          <h1 class="text-xl">G</h1>
+          <kbd id="G1" class="kbd">G1</kbd>
+          <kbd id="G2" class="kbd">G2</kbd>
+          <kbd id="G3" class="kbd">G3</kbd>
+          <kbd id="G4" class="kbd">G4</kbd>
+          <h1 class="text-xl">H</h1>
+          <kbd id="H1" class="kbd">H1</kbd>
+          <kbd id="H2" class="kbd">H2</kbd>
+          <kbd id="H3" class="kbd">H3</kbd>
+          <kbd id="H4" class="kbd">H4</kbd>
+          <h1 class="text-xl">I</h1>
+          <kbd id="I1" class="kbd">I1</kbd>
+          <kbd id="I2" class="kbd">I2</kbd>
+          <kbd id="I3" class="kbd">I3</kbd>
+          <kbd id="I4" class="kbd">I4</kbd>
+          <h1 class="text-xl">J</h1>
+          <kbd id="J1" class="kbd">J1</kbd>
+          <kbd id="J2" class="kbd">J2</kbd>
+          <kbd id="j3" class="kbd">j3</kbd>
+          <kbd id="j4" class="kbd">j4</kbd>
+          
+        </div> 
+        <div class="w-3/12">
+
+          <div class=" flex ml-24 font-bold text-xl gap-32">
+            <h1>seats</h1>
+            <h1>Class</h1>
+            <h1>Price</h1>
+          </div>
+          <hr class="ml-20 w-full mt-3 ">
+          
+          <div class=" flex ml-24 mt-10 text-xl gap-32">
+            <h1>C2</h1>
+            <h1>Economic</h1>
+            <h1>550</h1>
+          </div>
+          <div class=" flex ml-24 text-xl gap-32">
+            <h1>C2</h1>
+            <h1>Economic</h1>
+            <h1>550</h1>
+          </div>
+          <div class=" flex ml-24 gap-32 pl-10 w-full">
+            <h1>Total Price</h1>
+            <h2></h2>
+            <p>DBT 550 </p>
+          </div>
+          <div class="ml-20 w-96">
+            <label class="input input-bordered flex items-center gap-2">
+              <input type="text" class="grow " placeholder="Have any copupon?" />
+              <button class="btn bg-yellow-500 ">Apply</button>
+            </label>
+          </div>
+          <div class="flex ml-24"> 
+            <h1 class="mr-72">Grand Total</h1>
+            <h2>BDT 1100</h2>
+          </div>
+          <div class="ml-24 w-96 text-xl font-bold mt-16">
+            <h1>Passenger Name</h1>
+            <input type="text" placeholder="Type here" class="input input-bordered input-info w-full mt-5 max-w-xs" />
+            <h1>Phone Number</h1>
+            <input type="text" placeholder="Enter your number" class="input input-bordered input-info mt-5 w-full max-w-xs" />
+            <h1>Email Id</h1>
+            <input type="email" placeholder="email" class="input input-bordered input-info w-full mt-5 max-w-xs" />
+            <button class="btn btn-warning mt-5 w-80">Warning</button>
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ml-96 mt-24">
+    <div class="text-center bg-slate-50 w-8/12 pt-14 h-80">
+      <img class="ml-80" src="images/success.png">
+      <h1>SUCCESS</h1>
+      <p>Please Note: For your travel during Eid, you can only buy tickets of Shohagh <br> Paribahan and Soudia Air Con from Shohoz.com. </p>
+      <button class="btn btn-wide bg-yellow-700 text-white">Wide</button>
+    </div>
+  </footer>
+
+
+  <script src="paribahan.js"></script>
 </body>
+
 </html>
